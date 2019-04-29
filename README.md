@@ -20,7 +20,7 @@ Connect the VCC wire of the sender to 5V, GND to GND and Data to Pin 10 (or any 
 
 #### Software
 1. Install the [rc-switch](https://github.com/sui77/rc-switch) library using the arduino library manager
-[library in manager](.github/rcswitch.PNG)
+![library in manager](.github/rcswitch.PNG)
 2. Edit the Pin Number according to your used Pin
 2. Upload the sketch [433MHz-Arduino-Sender.ino](433MHz-Arduino-Sender/433MHz-Arduino-Sender.ino) to the Nano using the Arduino IDE
 
