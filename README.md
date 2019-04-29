@@ -42,8 +42,6 @@ Just open the little door on the back of the outlet and look at the switches.
 The first five (usually 1-5) are the systemcode and the last 5 (A-E) are the unitcode.
 Up = 1 and Down = 0
 
-<img src=".github/Switches.jpeg" alt="Switches" width="320" height="87">
-
 ## Usage
 Run rfsend.py in a terminal using ```python3 rfsend.py systemcode unitcode```, 
 for example ```python3 /path/to/rfsend.py ON 11010 01000```
