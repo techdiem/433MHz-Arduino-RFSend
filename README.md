@@ -7,7 +7,7 @@ This is an example for the control of simple 433MHz radio sockets as you can buy
 - Arduino Nano
 - 433MHz RF send module
 
-![Image of send module](https://mi2.rightinthebox.com/images/384x384/201209/hhgihj1348814186444.jpg)
+<img src="https://mi2.rightinthebox.com/images/384x384/201209/hhgihj1348814186444.jpg" alt="433mhz module" width="100" height="100">
 
 ### Software
 - [Python 3](https://www.python.org/downloads/)
@@ -41,7 +41,7 @@ Just open the little door on the back of the outlet and look at the switches.
 The first five (usually 1-5) are the systemcode and the last 5 (A-E) are the unitcode.
 Up = 1 and Down = 0
 
-![Switches](.github/Switches.jpeg)
+<img src=".github/Switches.jpeg" alt="Switches" width="320" height="87">
 
 ## Usage
 Run rfsend.py in a terminal using ```python3 rfsend.py systemcode unitcode```, 
