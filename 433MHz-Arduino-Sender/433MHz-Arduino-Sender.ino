@@ -4,6 +4,7 @@ RCSwitch mySwitch = RCSwitch();
 
 void setup() {
   mySwitch.enableTransmit(10); //Pin D10 on my chinese Nano
+  mySwitch.setPulseLength(360);
   Serial.begin(9600);
 }
 
@@ -24,6 +25,14 @@ void loop() {
     } else if (cmdvalue == "OFF") {
       mySwitch.switchOff(string2char(systemcode), string2char(unitcode));
       Serial.println("Switching off " + systemcode + " " + unitcode);
+
+    } else if (cmdvalue == "REV_ON") {
+      mySwitch.switchOn('a', unitcode.toInt());
+      Serial.println("Switching on " + systemcode + " " + unitcode);
+    } else if (cmdvalue == "REV_OFF") {
+      mySwitch.switchOff('a', unitcode.toInt());
+      Serial.println("Switching off " + systemcode + " " + unitcode);
+
     } else if (cmdvalue == "Test") {
       Serial.println("I am up and running!");
     } else {
