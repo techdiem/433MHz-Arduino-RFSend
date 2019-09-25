@@ -7,7 +7,7 @@ This is an example for the control of simple 433MHz radio sockets as you can buy
 - Arduino Nano
 - 433MHz RF send module
 
-<img src="https://mi2.rightinthebox.com/images/384x384/201209/hhgihj1348814186444.jpg" alt="433mhz module" width="100" height="100">
+<img src=".github/433MHz.jpeg" alt="433mhz module" width="100" height="100">
 
 ### Software
 - [Python 3](https://www.python.org/downloads/)
@@ -37,19 +37,30 @@ On Linux, you can get the serial port using ```ls /dev/ttyUSB*```,
 on Windows, you can just look in the Arduino IDE Port setting on in the Device Manager.
 
 ### Getting the systemcode and unitcode of your power outlets
+#### 10-DIP switches power plug
 This code only supports power outlets with 10 little switches for setting the codes.
 Just open the little door on the back of the outlet and look at the switches.
-The first five (usually 1-5) are the systemcode and the last 5 (A-E) are the unitcode.
+The first five (usually labeled as 1-5) are the systemcode and the last 5 (labeled A-E) are the unitcode.
 Up = 1 and Down = 0
 
+<img src=".github/DIP.jpeg" alt="DIP switches" width="200" height="65">
+
+#### REV power plugs
+Look at the little wheel at the back of the plug, the category (a,b,c or d) is the systemcode
+and the number (1-3) is the unitcode.
+
+<img src=".github/REV.jpeg" alt="REV selection wheel" width="200" height="143">
+
 ## Usage
-Run rfsend.py in a terminal using ```python3 rfsend.py systemcode unitcode```, 
+Run rfsend.py in a terminal using ```python3 rfsend.py command systemcode unitcode```, 
 for example ```python3 /path/to/rfsend.py ON 11010 01000```
 
 or on Windows: ```py C:\Users\Path\to\rfsend.py ON 11010 01000```
 
+Avaiable commands: ON, OFF, REV_ON, REV_OFF
+
 ### Example for Home Assistant
-```
+```yaml
 switch:
   - platform: command_line
     switches:

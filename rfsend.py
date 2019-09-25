@@ -10,7 +10,7 @@ systemcode = sys.argv[2]
 unitcode = sys.argv[3]
 
 if not (cmd in ["ON", "OFF", "REV_ON", "REV_OFF"] or systemcode or unitcode):
-    print("Usage: rfsend.py <ON/OFF> <Systemcode> <Unitcode>")
+    print("Usage: rfsend.py <ON/OFF/REV_ON/REV_OFF> <Systemcode> <Unitcode>")
 else:
     #Connect to Arduino: Change serial port here!
     try:
