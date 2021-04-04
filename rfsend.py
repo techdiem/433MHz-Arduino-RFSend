@@ -22,9 +22,9 @@ else:
     sleep(2)
     #Send data
     ser.write(bytes(cmd + ";" + systemcode + ";" + unitcode, 'utf-8'))
+    sleep(1)
     line = ser.readall()
     print("Result: ", line)
-    sleep(1)
 
     #Disconnect
     ser.close()
